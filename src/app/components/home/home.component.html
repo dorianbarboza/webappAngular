@@ -1,0 +1,81 @@
+<h1><img class="imgTitulo" src="assets/image/img2.png">Musica</h1>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="assets/image/banner1.jpg" alt="First slide">
+    </div>
+  </div>
+</div>
+
+<div class="sectionAlbum">
+<div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="assets/image/metallica1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Metallica</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="assets/image/doors1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">The Doors</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="assets/image/ctacuba1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Cafe Tacvba</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br>
+          <br>
+          <br>
+
+
+<div *ngFor="let artista of artistas">
+  <p>ID: {{ artista.id_Artista }}</p>
+  <p>Nombre: {{ artista.nombreArtista }}</p>
+  <p>Apellido: {{ artista.apellidoArtista }}</p>
+  <p>Fecha de Nacimiento{{ artista.fechaNacimientoArtista }}</p>
+  <p>Seudonimo: {{ artista.seudonimoArtista }}</p>
+  <p>Biografia{{ artista.biografiaArtista }}</p>
+  <p>Debut: {{ artista.debutArtista }}</p>
+  <p>Pais: {{ artista.paisArtista }}</p>
+  <p>Locacion: {{ artista.locacionArtista }}</p>
+  <p>Genero: {{ artista.generoArtista }}</p>
+  <p>Activo: {{ artista.activoArtista }}</p>
+  <p>Web: {{ artista.paginaWebArtista }}</p>
+</div>
+<br>
+<br>
+<br>

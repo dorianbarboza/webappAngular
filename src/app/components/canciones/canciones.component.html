@@ -1,0 +1,16 @@
+<h1>Canciones</h1>
+<hr>
+
+<div class="card-columns">
+<div class="card  tarjetaCuadro text-white bg-dark mb-3" *ngFor="let cancion of canciones" style="max-width: 18rem;">
+  <div class="card-header">{{ cancion.nombreCancion }}</div>
+  <div class="card-body">
+    <h5 class="card-title">{{ cancion.cantanteCancion }}</h5>
+    <img class="imgTarjeta" [src]="cancion.urlImgCancion">
+    <audio class="panelAudio" [src]="cancion.urlCancion" preload="none" controls></audio>
+    <p class="card-text textAlbum">{{ cancion.albumCancion }}</p>
+  </div>
+</div>
+</div>
+
+<a [routerLink] = "['/home']" class="btn btn-outline-danger btn-block botonRegresar"> Regresar</a>

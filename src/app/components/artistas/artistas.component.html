@@ -1,0 +1,29 @@
+<h1>Artistas</h1>
+<hr>
+
+
+<div class="card-columns">
+
+<div class="card animated fadeIn fast" *ngFor="let artista of artistas; let i = index">
+  <img class="card-img-top img-fluid" [src]="artista.imgArtista" [alt]="artista.nombreArtista">
+  <div class="card-block">
+    <h5 class="card-title">{{ artista.seudonimoArtista }}</h5>
+    <p class="card-text">{{ artista.biografiaArtista}}</p>
+    <p class="card-text"><small class="text-muted">{{ artista.debutArtista}}</small></p>
+    <button (click)="verArtistas(artista.id_Artista)"
+    type="button" class="btn btn-outline-primary btn-block">
+    Ver mas...
+  </button>
+  <button (click)="eliminarArtistas(artista.id_Artista)"
+  type="button" class="btn btn-outline-primary btn-block">
+  Borrar
+</button>
+  </div>
+</div>
+</div>
+
+
+<!--<button type="button" class="btn btn-outline-primary btn-block">
+  Ver mas..
+</button>-->
+<!-- <a [routerLink] = "['/artista',i]" class="bt btn-outline-primary">Ver mas link</a> -->

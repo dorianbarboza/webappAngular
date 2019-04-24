@@ -1,0 +1,47 @@
+<!--<h1 class="animated fadeIn">{{ artista.nombre }} <small>{{ artista.nombre }}</small></h1>
+<hr>
+
+<div class="row animted fadeIn fast">
+
+  <div class="col-md-m4">
+
+    <img [src]="artista.img" class="img-fluid" [alt]="artista.nombre">
+    <br><br>
+    <a [routerLink] = "['/artistas']" class=" btn btn-outline-danger btn-block"> Regresar</a>
+
+  </div>
+
+  <div class="col-md-m8">
+    <h3>{{ artista.nombre}}</h3>
+    <hr>
+    <p>
+      {{ artista.nombre }}
+    </p>
+    <div>
+      <img *ngIf="artista.nombre == 'Marvel'" class="img-logo" src="assets/image/eminem1.jpg" alt="Marvel">
+      <img *ngIf="artista.nombre == 'DC'" class="img-logo" src="assets/image/metallica1.jpg" alt="DC">
+    </div>
+  </div>
+</div>
+-->
+
+<h1> {{ artista.nombreArtista }} </h1>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" [src]="artista.imgBanner" alt="First slide">
+    </div>
+  </div>
+</div>
+
+<br>
+<div class="card bg-dark text-white">
+  <img class="card-img" src="assets/image/fondo2.jpg" alt="Card image">
+  <div class="card-img-overlay">
+    <h1 class="card-title">Biografia</h1>
+    <h4 class="card-text"> {{artista.biografia }} </h4>
+    <h3 class="card-text">Locacion: {{artista.locacion}}</h3>
+  </div>
+</div>
+<a [routerLink] = "['/artistas']" class="btn btn-outline-danger btn-block botonRegresar"> Regresar</a>
